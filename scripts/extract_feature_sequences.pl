@@ -186,14 +186,14 @@ while(<COORDS>){
 			}
 		
 			# have consensus stop codon.
-			if ( ! $stop_codons{substr($seq, -3)} ){
-				$include = 0;
-			}
+			#if ( ! $stop_codons{substr($seq, -3)} ){
+			#	$include = 0;
+			#}
 		
 			# have consensus start codon.
-			if ( ! $start_codons{substr($seq, 0, 3)} ){
-				$include = 0;
-			}
+			#if ( ! $start_codons{substr($seq, 0, 3)} ){
+			#	$include = 0;
+			#}
 		
 			# have <5% Ns
 			my $ns = () = $seq =~ /N/;
@@ -202,9 +202,9 @@ while(<COORDS>){
 			}
 		
 			# exclude sequences < length_threshold
-			if ( $l <= $length_threshold ){
-				$include = 0;
-			}
+			#if ( $l <= $length_threshold ){
+			#	$include = 0;
+			#}
 		
 			if ( ($include == 1) || ( $check == 1 ) ){
 		
